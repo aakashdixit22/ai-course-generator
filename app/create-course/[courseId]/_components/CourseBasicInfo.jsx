@@ -11,7 +11,7 @@ function CourseBasicInfo({course}) {
         <h2 className='font-bold text-3xl'>{course?.courseOutput?.courseName}</h2>
         <p className='text-sm mt-3 text-gray-400 '>{course?.courseOutput?.description}</p>
         <h2 className='font-medium mt-3 flex gap-2 items-center text-primary'><HiOutlinePuzzlePiece/>{course?.category}</h2>
-        <Button className='w-full mt-20'> Start Course</Button>
+        <Button className='w-full mt-20'> Start Corse</Button>
         </div>
         <div>
             <Image src={'/5437683.jpg'}  className='rounded-xl object-cover ' width={450} height={450}/>
