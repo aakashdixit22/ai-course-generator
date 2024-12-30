@@ -16,3 +16,11 @@ export const CourseList = pgTable('courseList',{
 
 
 })
+
+export const Chapters = pgTable('chapters',{
+    id:serial('id').primaryKey().notNull(),
+    courseId:varchar('courseId').notNull(),
+    chapterId:varchar('chapterId').notNull(),
+    content:json('content').notNull(),
+    videoId:varchar('videoId').notNull(),
+}) 
