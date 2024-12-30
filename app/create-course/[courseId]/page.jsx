@@ -31,7 +31,7 @@ function CourseLayout({params}) {
     <h2 className='font-bold text-center text-2xl'> CourseLayout</h2>
 
     {/*Baic Info */}
-    <CourseBasicInfo course={course}/>
+    <CourseBasicInfo course={course} refreshData={()=>GetCourse()}/>
 
 
     {/*Course Content */}
@@ -39,7 +39,7 @@ function CourseLayout({params}) {
 
 
     {/*List Of lessons */}
-    <ChapterList course={course}/>
+    <ChapterList course={course} refreshData={()=>GetCourse()}/>
     </div>
   )
 }
