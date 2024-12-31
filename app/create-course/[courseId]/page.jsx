@@ -65,7 +65,7 @@ function CourseLayout({params}) {
 
             //Save Chapter Content+Video URL
             await db.insert(Chapters).values({
-              chapterId:index,
+              chapterId:index ,
               courseId:course?.courseId,
               content:content,
               videoId:videoId
@@ -79,7 +79,8 @@ function CourseLayout({params}) {
             setLoading(false);
             console.log(e);
           }
-          // router.replace('/create-course/'+course?.courseId+'/finish');
+          
+          router.replace('/create-course/'+course?.courseId+'/finish');
 
         }
       
@@ -90,7 +91,7 @@ function CourseLayout({params}) {
 
             
     return (
-    <div className='mt-10 px-7 md:px-20 lg:px-44'>
+    <div className='mt-10 px-10 md:px-20 lg:px-44 my-7'>
     <h2 className='font-bold text-center text-2xl'> CourseLayout</h2>
     <LoadingDialog loading={loading}/>
     

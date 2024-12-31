@@ -13,6 +13,8 @@ export const CourseList = pgTable('courseList',{
     createdBy:varchar('createdBy').notNull(),
     userName:varchar('username'),
     userProfileImage:varchar('userProfileImage'),
+    courseBanner:varchar('courseBanner').default('/5437683.jpg'),
+   
 
 
 })
