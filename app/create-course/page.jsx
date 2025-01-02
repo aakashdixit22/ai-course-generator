@@ -10,7 +10,7 @@ import {
 } from "react-icons/hi2";
 import SelectCateogry from "./_components/SelectCateogry";
 import TopicDescription from "./_components/TopicDescription";
-import { Select } from "@radix-ui/react-select";
+
 import SelectOption from "./_components/SelectOption";
 import { useContext } from "react";
 import { UserInputContext } from "@/app/_context/UserInputContext";
@@ -82,6 +82,7 @@ function CreateCourse() {
     console.log(FINAL_PROMPT);
     const result=await GenerateCourseLayout_AI.sendMessage(FINAL_PROMPT);
     console.log(result.response.text());
+    console.log(user);
     console.log(JSON.parse(result.response.text()));
     setLoading(false);                      //generate content for each of chapter
     SaveCourseLayoutinDb(JSON.parse(result.response.text()));

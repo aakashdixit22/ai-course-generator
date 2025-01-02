@@ -5,8 +5,11 @@ import { HiOutlineHome,HiOutlineSquare3Stack3D,HiOutlineShieldCheck,HiOutlinePow
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Progress } from '@/components/ui/progress';
+import { UsersCourseListContext } from '@/app/_context/UserCourseListContext';
+import { useContext } from 'react';
 
 function SideBar() {
+    const{userCourseList,setUserCourseList}=useContext(UsersCourseListContext)
     const Menu=[
         {
             id:1,
@@ -14,12 +17,8 @@ function SideBar() {
             icon:<HiOutlineHome/>,
             path:'/dashboard'
         },
-        {
-            id:1,
-            name:'Explore',
-            icon:<HiOutlineSquare3Stack3D/>,
-            path:'/dashboard/explore'
-        },
+           
+        
         {
             id:1,
             name:'Upgrade',
@@ -57,8 +56,8 @@ function SideBar() {
 
         </ul>
         <div className='bottom-10 absolute w-[80%]'>
-            <Progress value={50}/>
-            <h2 className='text-sm my-2'>3 out of 5 course created</h2>
+            <Progress value={(userCourseList?.length/5)*100}/>
+            <h2 className='text-sm my-2'>{userCourseList?.length} out of 5 course created</h2>
             <h1 className='text-xs text-gray-500'>Upgrade to premium to unlock unlimited course generate.</h1>
         </div>
     </div>

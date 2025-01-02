@@ -6,6 +6,7 @@ import DropdownOption from './DropdownOption'
 import { db } from '@/configs/db'
 import { CourseList } from '@/configs/schema'
 import { eq } from 'drizzle-orm'
+import Link from 'next/link'
 
 
 function CourseCard({course,refreshData}) {
@@ -29,11 +30,13 @@ function CourseCard({course,refreshData}) {
     <div className='p-2 sm:p-3 md:p-4'>
       <div className='bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer 
         transform hover:-translate-y-1 w-full'>
+        <Link href={'/course/'+course?.courseId}>
         <img 
           src={course?.courseBanner} 
           alt="course" 
           className='w-full h-[120px] sm:h-[150px] md:h-[180px] object-cover rounded-t-xl'
         />
+        </Link>
         <div className='p-3 sm:p-4'>
           <h1 className='text-base sm:text-lg md:text-xl font-medium line-clamp-2 flex justify-between items-center'>
             {course?.courseOutput?.courseName}<DropdownOption handleDelete={()=>handleDelete()}><HiMiniEllipsisVertical/></DropdownOption>
