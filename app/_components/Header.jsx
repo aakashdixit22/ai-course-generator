@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 function Header() {
   return (
@@ -8,8 +9,9 @@ function Header() {
         
         <Image src={'/logo.svg'} alt="logo" width={150} height={150} />
        
-        
-        <Button>Get started</Button>
+        <Link href={'/dashboard'}>
+       <Button >Get started</Button>
+        </Link>
 
     </div>
   )

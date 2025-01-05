@@ -14,7 +14,7 @@ function AddCourse() {
             <h2 className='text-2xl'>Hello,<span className='font-bold'>{user?.fullName}</span></h2>
             <p className='text-sm text-gray-500'>Create new course with AI,share with your friends</p>
         </div>
-        <Link href={userCourseList>=5?'/dashboard/upgrade':'/create-course'}>
+        <Link href={userCourseList>5?'/dashboard/upgrade':'/create-course'}>
         <Button className='font-semibold'>+Create Course</Button>
         </Link>
     </div>
