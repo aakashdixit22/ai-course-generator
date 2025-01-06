@@ -70,3 +70,52 @@ body {
     @apply bg-background text-foreground;
   }
 }
+.meteor-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.meteor {
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(white, transparent);
+  transform: rotate(-45deg);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh) translateX(0) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(50px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+/* Randomize meteor positions */
+.meteor:nth-child(odd) {
+  animation-duration: 2.5s;
+}
+
+.meteor:nth-child(even) {
+  animation-duration: 3.5s;
+}
+
+.meteor:nth-child(1) { left: 10%; animation-delay: 0s; }
+.meteor:nth-child(2) { left: 20%; animation-delay: 1s; }
+.meteor:nth-child(3) { left: 30%; animation-delay: 2s; }
+.meteor:nth-child(4) { left: 40%; animation-delay: 3s; }
+.meteor:nth-child(5) { left: 50%; animation-delay: 1.5s; }
+.meteor:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+.meteor:nth-child(7) { left: 70%; animation-delay: 0.5s; }
+.meteor:nth-child(8) { left: 80%; animation-delay: 3.5s; }
+.meteor:nth-child(9) { left: 90%; animation-delay: 1s; }
+.meteor:nth-child(10) { left: 95%; animation-delay: 2s; }

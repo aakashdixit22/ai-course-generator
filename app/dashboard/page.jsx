@@ -7,7 +7,7 @@ function Dashboard() {
   return (
     <div> 
     <AddCourse/>
-    {/* Display list of courses */}
+    
     <UsersCourseList/>
     
 
