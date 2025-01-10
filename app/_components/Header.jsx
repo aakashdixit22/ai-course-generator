@@ -173,7 +173,7 @@ function Header() {
   };
 
   return (
-    <div className="flex flex-row justify-between items-center p-4 md:p-5 bg-white w-full fixed top-0 left-0 right-0 z-50 shadow-md transition-all duration-300">
+    <div className="flex flex-row justify-between items-center p-4 md:p-5 bg-white w-full  top-0 left-0 right-0 z-50 shadow-md transition-all duration-300">
       {/* Logo */}
       <div className="hover:scale-105 transition-transform duration-300">
         <Image src={'/logo.svg'} alt="logo" width={120} height={120} className="w-auto h-8 md:h-10" />
@@ -247,5 +247,4 @@ function Header() {
 }
 
 export default Header;
-
 
